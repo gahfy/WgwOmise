@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -62,7 +63,8 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return (
+  
+  return <NavigationContainer>{(
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
@@ -93,7 +95,7 @@ function App(): JSX.Element {
         </View>
       </ScrollView>
     </SafeAreaView>
-  );
+  )}</NavigationContainer>;
 }
 
 const styles = StyleSheet.create({
