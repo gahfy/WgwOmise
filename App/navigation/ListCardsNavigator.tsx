@@ -10,7 +10,7 @@ ListCardsStack
 
 const ListCardsNavigator = () => {
   return (
-    <ListCardsStack.Navigator screenOptions={{ headerBackTitleVisible: false, headerTintColor: 'black' }}>
+    <ListCardsStack.Navigator screenOptions={{ headerBackTitleVisible: false, headerTintColor: 'black', headerShadowVisible: false }}>
       <ListCardsStack.Screen options={{ headerRight: () => (<RightPlusIcon screenTitle={ 'add_card_title' } />) }} name={I18n.t('cards_title')}  component={ListCardsScreen} />
       <ListCardsStack.Screen options={{ headerTitle: '' }} name={I18n.t('add_card_title')} component={AddCardScreen} />
     </ListCardsStack.Navigator>
